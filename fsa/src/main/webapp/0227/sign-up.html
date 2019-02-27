@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>注册</title>
+        <style type="text/css">
+            .row { }
+            .row label {  }
+            .row span {  }
+            .row span input { }
+        </style>
+    </head>
+    <body>
+
+        <!--
+            @WebServlet( "/sign/up" )
+            public class SignUpServlet .......
+        -->
+        <form action="/sign/up" method="post">
+
+            <div class="row">
+                <label>用户名</label>
+                <span>
+                    <input type="text" name="username" placeholder="请输入用户名">
+                </span>
+            </div>
+
+            <div class="row">
+                <label>密码</label>
+                <span>
+                    <input type="password" name="password" placeholder="请输入密码">
+                </span>
+            </div>
+
+            <div class="row">
+                <label>确认密码</label>
+                <span>
+                    <input type="password" name="confirm" placeholder="请确认密码">
+                </span>
+            </div>
+
+            <div class="row">
+                <label>性别</label>
+                <span>
+                    <input type="radio" name="gender" value="male" > 男
+                    <input type="radio" name="gender" value="female" > 女
+                </span>
+            </div>
+
+            <div class="row">
+                <label>爱好</label>
+                <span>
+                    <input type="checkbox" name="hobby" value="eat" > 吃
+                    <input type="checkbox" name="hobby" value="sleep" > 睡
+                    <input type="checkbox" name="hobby" value="eatji" > 吃鸡
+                </span>
+            </div>
+
+            <div>
+                <label>告白</label>
+                <span>
+                    <textarea name="gaobai"></textarea>
+                </span>
+            </div>
+
+            <div>
+                <input type="submit" value="注册">
+            </div>
+
+        </form>
+
+    </body>
+</html>

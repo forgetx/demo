@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>后代选择器</title>
+        <style type="text/css">
+
+            .wrapper {
+                width: 40% ;
+                margin: auto ;
+                text-align: center ;
+            }
+
+            .wrapper img {
+                width: 270px;
+                height: 129px ;
+            }
+
+            .wrapper .search {
+                /*background-color: yellow ;*/
+                border: 1px solid #3379f0;
+                overflow: hidden ; /*如果元素内部含有浮动元素，为了避免父元素塌陷问题，可以指定 overflow: hidden ; */
+            }
+
+            .wrapper .search .keyword {
+                float : left ;
+                width: 80% ;
+                /*background-color: #eeeeee;*/
+                height: 36px;
+            }
+
+            .wrapper .search .keyword input {
+                margin-left: 5px ;
+                width: 95%;
+                background-color: transparent;
+                border: none ;
+                outline : none ;
+                height: 32px;
+            }
+
+            .wrapper .search .button {
+                float: right;
+                width: 20% ;
+                background-color: #3385ff ;
+                height: 36px;
+            }
+
+            .wrapper .search .button input {
+                border: none ; /* 取消边框 */
+                outline: none ; /* 取消轮廓 */
+                color : #FFFFFF ;
+                width: 100% ;
+                background-color: transparent; /*背景颜色使用透明*/
+                height: 36px;
+                font-size: 16px;
+            }
+
+            .wrapper .search .button input:hover {
+                background-color: green ;
+            }
+        </style>
+    </head>
+    <body>
+
+        <div class="wrapper">
+            <img src="bd_logo.png" >
+            <form action="http://www.baidu.com/s">
+                <div class="search">
+                    <span class="keyword">   <input type="text" name="wd" autofocus >              </span>
+                    <span class="button">      <input type="submit" value="百度一下" > </span>
+                </div>
+            </form>
+        </div>
+
+        <div class="search">搜索</div>
+
+    </body>
+</html>
